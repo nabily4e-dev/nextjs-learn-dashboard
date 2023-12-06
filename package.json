@@ -1,4 +1,9 @@
 {
+  "name": "nextjs-learn-dashboard",
+  "version": "0.1.0",
+  "description": "Learn how to build a dashboard with Next.js",
+  "author": "Vercel",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "next build",
