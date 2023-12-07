@@ -1,15 +1,16 @@
 {
   "name": "nextjs-learn-dashboard",
   "version": "0.1.0",
-  "description": "Learn how to build a dashboard with Next.js",
-  "author": "Vercel",
-  "license": "MIT",
   "private": true,
+  "description": "Learn how to build a dashboard with Next.js",
+  "license": "MIT",
+  "author": "Vercel",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
+    "seed": "node -r dotenv/config ./scripts/seed.js",
     "start": "next start"
   },
   "dependencies": {
