@@ -38,17 +38,17 @@ As mentioned above, you'll be using URL search params to manage the search state
 
 There are a couple of benefits of implementing search with URL params:
 
-* **Bookmarkable and Shareable URLs**: Since the search parameters are in the URL, users can bookmark the current state of the application, including their search queries and filters, for future reference or sharing.
-* **Server-Side Rendering and Initial Load**: URL parameters can be directly consumed on the server to render the initial state, making it easier to handle server rendering.
-* **Analytics and Tracking**: Having search queries and filters directly in the URL makes it easier to track user behavior without requiring additional client-side logic.
+- **Bookmarkable and Shareable URLs**: Since the search parameters are in the URL, users can bookmark the current state of the application, including their search queries and filters, for future reference or sharing.
+- **Server-Side Rendering and Initial Load**: URL parameters can be directly consumed on the server to render the initial state, making it easier to handle server rendering.
+- **Analytics and Tracking**: Having search queries and filters directly in the URL makes it easier to track user behavior without requiring additional client-side logic.
 
 ## [Adding the search functionality](https://nextjs.org/learn/dashboard-app/adding-search-and-pagination#adding-the-search-functionality)
 
 These are the Next.js client hooks that you'll use to implement the search functionality:
 
-* **`useSearchParams`**- Allows you to access the parameters of the current URL. For example, the search params for this URL `/dashboard/invoices?page=1&query=pending` would look like this: `{page: '1', query: 'pending'}`.
-* **`usePathname`** - Lets you read the current URL's pathname. For example, for the route `/dashboard/invoices`, `usePathname` would return `'/dashboard/invoices'`.
-* **`useRouter`** - Enables navigation between routes within client components programmatically. There are [multiple methods](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter) you can use.
+- **`useSearchParams`**- Allows you to access the parameters of the current URL. For example, the search params for this URL `/dashboard/invoices?page=1&query=pending` would look like this: `{page: '1', query: 'pending'}`.
+- **`usePathname`** - Lets you read the current URL's pathname. For example, for the route `/dashboard/invoices`, `usePathname` would return `'/dashboard/invoices'`.
+- **`useRouter`** - Enables navigation between routes within client components programmatically. There are [multiple methods](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter) you can use.
 
 Here's a quick overview of the implementation steps:
 
@@ -61,8 +61,8 @@ Here's a quick overview of the implementation steps:
 
 Go into the `<Search>` Component (`/app/ui/search.tsx`), and you'll notice:
 
-* `"use client"` - This is a Client Component, which means you can use event listeners and hooks.
-* `<input>` - This is the search input.
+- `"use client"` - This is a Client Component, which means you can use event listeners and hooks.
+- `<input>` - This is the search input.
 
 Create a new `handleSearch` function, and add an `onChange` listener to the `<input>` element. `onChange` will invoke `handleSearch` whenever the input value changes.
 
@@ -116,10 +116,10 @@ Import `useRouter` and `usePathname` from `'next/navigation'`, and use the `repl
 
 Here's a breakdown of what's happening:
 
-* `${pathname}` is the current path, in your case, `"/dashboard/invoices"`.
-* As the user types into the search bar, `params.toString()` translates this input into a URL-friendly format.
-* `replace(${pathname}?${params.toString()})` updates the URL with the user's search data. For example, `/dashboard/invoices?query=lee` if the user searches for "Lee".
-* The URL is updated without reloading the page, thanks to Next.js's client-side navigation (which you learned about in the chapter on [navigating between pages](https://nextjs.org/learn/dashboard-app/navigating-between-pages).
+- `${pathname}` is the current path, in your case, `"/dashboard/invoices"`.
+- As the user types into the search bar, `params.toString()` translates this input into a URL-friendly format.
+- `replace(${pathname}?${params.toString()})` updates the URL with the user's search data. For example, `/dashboard/invoices?query=lee` if the user searches for "Lee".
+- The URL is updated without reloading the page, thanks to Next.js's client-side navigation (which you learned about in the chapter on [navigating between pages](https://nextjs.org/learn/dashboard-app/navigating-between-pages).
 
 ### [3. Keeping the URL and input in sync](https://nextjs.org/learn/dashboard-app/adding-search-and-pagination#3-keeping-the-url-and-input-in-sync)
 
@@ -133,11 +133,7 @@ To ensure the input field is in sync with the URL and will be populated when sha
 
 > **`defaultValue` vs. `value` / Controlled vs. Uncontrolled**
 >
->
->
 > If you're using state to manage the value of an input, you'd use the `value` attribute to make it a controlled component. This means React would manage the input's state.
->
->
 >
 > However, since you're not using state, you can use `defaultValue`. This means the native input will manage its own state. This is okay since you're saving the search query to the URL instead of state.
 
@@ -167,16 +163,10 @@ With these changes in place, go ahead and test it out. If you search for a term,
 
 > **When to use the `useSearchParams()` hook vs. the `searchParams` prop?**
 >
->
->
 > You might have noticed you used two different ways to extract search params. Whether you use one or the other depends on whether you're working on the client or the server.
 >
->
->
-> * `<Search>` is a Client Component, so you used the `useSearchParams()` hook to access the params from the client.
-> * `<Table>` is a Server Component that fetches its own data, so you can pass the `searchParams` prop from the page to the component.
->
->
+> - `<Search>` is a Client Component, so you used the `useSearchParams()` hook to access the params from the client.
+> - `<Table>` is a Server Component that fetches its own data, so you can pass the `searchParams` prop from the page to the component.
 >
 > As a general rule, if you want to read the params from the client, use the `useSearchParams()` hook as this avoids having to go back to the server.
 
@@ -205,8 +195,6 @@ You're updating the URL on every keystroke, and therefore querying your database
 **Debouncing** is a programming practice that limits the rate at which a function can fire. In our case, you only want to query the database when the user has stopped typing.
 
 > **How Debouncing Works:**
->
->
 >
 > 1. **Trigger Event**: When an event that should be debounced (like a keystroke in the search box) occurs, a timer starts.
 > 2. **Wait**: If a new event occurs before the timer expires, the timer is reset.
@@ -310,9 +298,9 @@ Next, create a new function inside the `<Pagination>` Component called `createPa
 
 Here's a breakdown of what's happening:
 
-* `createPageURL` creates an instance of the current search parameters.
-* Then, it updates the "page" parameter to the provided page number.
-* Finally, it constructs the full URL using the pathname and updated search parameters.
+- `createPageURL` creates an instance of the current search parameters.
+- Then, it updates the "page" parameter to the provided page number.
+- Finally, it constructs the full URL using the pathname and updated search parameters.
 
 The rest of the `<Pagination>` component deals with styling and different states (first, last, active, disabled, etc). We won't go into detail for this course, but feel free to look through the code to see where `createPageURL` is being called.
 
@@ -321,7 +309,7 @@ Finally, when the user types a new search query, you want to reset the page numb
 /app/ui/search.tsx
 
 ```
-'use client'; import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';import { usePathname, useRouter, useSearchParams } from 'next/navigation';import { useDebouncedCallback } from 'use-debounce'; export default function Search({ placeholder }: { placeholder: string }) {  const searchParams = useSearchParams();  const { replace } = useRouter();  const pathname = usePathname();   const handleSearch = useDebouncedCallback((term) => {    const params = new URLSearchParams(searchParams);    params.set('page', '1');    if (term) {      params.set('query', term);    } else {      params.delete('query');    }    replace(`${pathname}?${params.toString()}`);  }, 300); 
+'use client'; import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';import { usePathname, useRouter, useSearchParams } from 'next/navigation';import { useDebouncedCallback } from 'use-debounce'; export default function Search({ placeholder }: { placeholder: string }) {  const searchParams = useSearchParams();  const { replace } = useRouter();  const pathname = usePathname();   const handleSearch = useDebouncedCallback((term) => {    const params = new URLSearchParams(searchParams);    params.set('page', '1');    if (term) {      params.set('query', term);    } else {      params.delete('query');    }    replace(`${pathname}?${params.toString()}`);  }, 300);
 ```
 
 ## [Summary](https://nextjs.org/learn/dashboard-app/adding-search-and-pagination#summary)
@@ -330,9 +318,9 @@ Congratulations! You've just implemented search and pagination using URL Params 
 
 To summarize, in this chapter:
 
-* You've handled search and pagination with URL search parameters instead of client state.
-* You've fetched data on the server.
-* You're using the `useRouter` router hook for smoother, client-side transitions.
+- You've handled search and pagination with URL search parameters instead of client state.
+- You've fetched data on the server.
+- You're using the `useRouter` router hook for smoother, client-side transitions.
 
 These patterns are different from what you may be used to when working with client-side React, but hopefully, you now better understand the benefits of using URL search params and lifting this state to the server.
 

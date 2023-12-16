@@ -20,7 +20,7 @@ This command uses [`create-next-app`](https://nextjs.org/docs/app/api-reference/
 
 Unlike tutorials that have you write code from scratch, much of the code for this course is already written for you. This better reflects real-world development, where you'll likely be working with existing codebases.
 
-Our goal is to help you focus on learning the main features of Next.js, without having to write *all* the application code.
+Our goal is to help you focus on learning the main features of Next.js, without having to write _all_ the application code.
 
 After installation, open the project in your code editor and navigate to `nextjs-dashboard`.
 
@@ -38,12 +38,12 @@ You'll notice that the project has the following folder structure:
 
 ![Folder structure of the dashboard project, showing the main folders and files: app, public, and config files.|1600x687](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Flearn-folder-structure.png&w=3840&q=75&dpl=dpl_FCceakDAygFm3XpfzDutxg9ALjmD)
 
-* **`/app`**: Contains all the routes, components, and logic for your application, this is where you'll be mostly working from.
-* **`/app/lib`**: Contains functions used in your application, such as reusable utility functions and data fetching functions.
-* **`/app/ui`**: Contains all the UI components for your application, such as cards, tables, and forms. To save time, we've pre-styled these components for you.
-* **`/public`**: Contains all the static assets for your application, such as images.
-* **`/scripts`**: Contains a seeding script that you'll use to populate your database in a later chapter.
-* **Config Files**: You'll also notice config files such as `next.config.js` at the root of your application. Most of these files are created and pre-configured when you start a new project using `create-next-app`. You will not need to modify them in this course.
+- **`/app`**: Contains all the routes, components, and logic for your application, this is where you'll be mostly working from.
+- **`/app/lib`**: Contains functions used in your application, such as reusable utility functions and data fetching functions.
+- **`/app/ui`**: Contains all the UI components for your application, such as cards, tables, and forms. To save time, we've pre-styled these components for you.
+- **`/public`**: Contains all the static assets for your application, such as images.
+- **`/scripts`**: Contains a seeding script that you'll use to populate your database in a later chapter.
+- **Config Files**: You'll also notice config files such as `next.config.js` at the root of your application. Most of these files are created and pre-configured when you start a new project using `create-next-app`. You will not need to modify them in this course.
 
 Feel free to explore these folders, and don't worry if you don't understand everything the code is doing yet.
 
@@ -51,8 +51,8 @@ Feel free to explore these folders, and don't worry if you don't understand ever
 
 When you're building user interfaces, it helps to have some placeholder data. If a database or API is not yet available, you can:
 
-* Use placeholder data in JSON format or as JavaScript objects.
-* Use a 3rd party service like [mockAPI](https://mockapi.io/).
+- Use placeholder data in JSON format or as JavaScript objects.
+- Use a 3rd party service like [mockAPI](https://mockapi.io/).
 
 For this project, we've provided some placeholder data in `app/lib/placeholder-data.js`. Each JavaScript object in the file represents a table in your database. For example, for the invoices table:
 
@@ -62,7 +62,7 @@ For this project, we've provided some placeholder data in `app/lib/placeholder-d
 const invoices = [  {    customer_id: customers[0].id,    amount: 15795,    status: 'pending',    date: '2022-12-06',  },  {    customer_id: customers[1].id,    amount: 20348,    status: 'pending',    date: '2022-11-14',  },  // ...];
 ```
 
-In the chapter on [setting up your database](https://nextjs.org/learn/dashboard-app/setting-up-your-database), you'll use this data to *seed* your database (populate it with some initial data).
+In the chapter on [setting up your database](https://nextjs.org/learn/dashboard-app/setting-up-your-database), you'll use this data to _seed_ your database (populate it with some initial data).
 
 ### [TypeScript](https://nextjs.org/learn/dashboard-app/getting-started#typescript)
 
@@ -82,10 +82,8 @@ By using TypeScript, you can ensure you don't accidentally pass the wrong data f
 
 > **If you're a TypeScript developer:**
 >
->
->
-> * We're manually declaring the data types, but for better type-safety, we recommend [Prisma](https://www.prisma.io/), which automatically generates types based on your database schema.
-> * Next.js detects if your project uses TypeScript and automatically installs the necessary packages and configuration. Next.js also comes with a [TypeScript plugin](https://nextjs.org/docs/app/building-your-application/configuring/typescript#typescript-plugin) for your code editor, to help with auto-completion and type-safety.
+> - We're manually declaring the data types, but for better type-safety, we recommend [Prisma](https://www.prisma.io/), which automatically generates types based on your database schema.
+> - Next.js detects if your project uses TypeScript and automatically installs the necessary packages and configuration. Next.js also comes with a [TypeScript plugin](https://nextjs.org/docs/app/building-your-application/configuring/typescript#typescript-plugin) for your code editor, to help with auto-completion and type-safety.
 
 ## [Running the development server](https://nextjs.org/learn/dashboard-app/getting-started#running-the-development-server)
 

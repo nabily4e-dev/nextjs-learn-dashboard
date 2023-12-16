@@ -48,7 +48,7 @@ Now, make sure that the development server is running and visit http://localhost
 
 This is how you can create different pages in Next.js: create a new route segment using a folder, and add a `page` file inside it.
 
-By having a special name for `page` files, Next.js allows you to [colocate](https://nextjs.org/docs/app/building-your-application/routing#colocation) UI components, test files, and other related code with your routes. Only the content inside the `page` file will be publicly accessible. For example, the `/ui` and `/lib` folders are *colocated* inside the `/app` folder along with your routes.
+By having a special name for `page` files, Next.js allows you to [colocate](https://nextjs.org/docs/app/building-your-application/routing#colocation) UI components, test files, and other related code with your routes. Only the content inside the `page` file will be publicly accessible. For example, the `/ui` and `/lib` folders are _colocated_ inside the `/app` folder along with your routes.
 
 ## [Practice: Creating the dashboard pages](https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages#practice-creating-the-dashboard-pages)
 

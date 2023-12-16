@@ -26,10 +26,8 @@ If you need help setting up your repository, take a look at [this guide on GitHu
 
 > **Good to know:**
 >
->
->
-> * You can also use other Git provider like GitLab or Bitbucket.
-> * If you're new to GitHub, we recommend the [GitHub Desktop App](https://desktop.github.com/) for a simplified development workflow.
+> - You can also use other Git provider like GitLab or Bitbucket.
+> - If you're new to GitHub, we recommend the [GitHub Desktop App](https://desktop.github.com/) for a simplified development workflow.
 
 ## [Create a Vercel account](https://nextjs.org/learn/dashboard-app/setting-up-your-database#create-a-vercel-account)
 
@@ -109,12 +107,10 @@ That's right! Seeding is useful when you want to have some data to work with as 
 
 > **Troubleshooting**:
 >
->
->
-> * Make sure to reveal your database secrets before copying it into your `.env` file.
-> * The script uses `bcrypt` to hash the user's password, if `bcrypt` isn't compatible with your environment, you can update the script to use [`bcryptjs` ](https://www.npmjs.com/package/bcryptjs) instead.
-> * If you run into any issues while seeding your database and want to run the script again, you can drop any existing tables by running `DROP TABLE tablename` in your database query interface. See the [executing queries section](https://nextjs.org/learn/dashboard-app/setting-up-your-database#executing-queries) below for more details. But be careful, this command will delete the tables and all their data. It's ok to do this with your example app since you're working with placeholder data, but you shouldn't run this command in a production app.
-> * If you continue to experience issues while seeding your Verce Postgres database, please open a [discussion on GitHub](https://github.com/vercel/next-learn/issues).
+> - Make sure to reveal your database secrets before copying it into your `.env` file.
+> - The script uses `bcrypt` to hash the user's password, if `bcrypt` isn't compatible with your environment, you can update the script to use [`bcryptjs` ](https://www.npmjs.com/package/bcryptjs) instead.
+> - If you run into any issues while seeding your database and want to run the script again, you can drop any existing tables by running `DROP TABLE tablename` in your database query interface. See the [executing queries section](https://nextjs.org/learn/dashboard-app/setting-up-your-database#executing-queries) below for more details. But be careful, this command will delete the tables and all their data. It's ok to do this with your example app since you're working with placeholder data, but you shouldn't run this command in a production app.
+> - If you continue to experience issues while seeding your Verce Postgres database, please open a [discussion on GitHub](https://github.com/vercel/next-learn/issues).
 
 ## [Exploring your database](https://nextjs.org/learn/dashboard-app/setting-up-your-database#exploring-your-database)
 
@@ -128,7 +124,7 @@ By selecting each table, you can view its records and ensure the entries align w
 
 ## [Executing queries](https://nextjs.org/learn/dashboard-app/setting-up-your-database#executing-queries)
 
-You can switch to the "query" tab to interact with your database. This section supports standard SQL commands. For instance, inputting `DROP TABLE customers` will delete "customers" table along with all its data - ***so be careful***!
+You can switch to the "query" tab to interact with your database. This section supports standard SQL commands. For instance, inputting `DROP TABLE customers` will delete "customers" table along with all its data - **_so be careful_**!
 
 Let's run your first database query. Paste and run the following SQL code into the Vercel interface:
 

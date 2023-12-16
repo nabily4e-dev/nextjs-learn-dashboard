@@ -138,8 +138,8 @@ There may be cases where you may need to conditionally style an element based on
 
 [`clsx` ](https://www.npmjs.com/package/clsx) is a library that lets you toggle class names easily. We recommend taking a look at [documentation](https://github.com/lukeed/clsx) for more details, but here's the basic usage:
 
-* Suppose that you want to create an `InvoiceStatus` component which accepts `status`. The status can be `'pending'` or `'paid'`.
-* If it's `'paid'`, you want the color to be green. If it's `'pending'`, you want the color to be gray.
+- Suppose that you want to create an `InvoiceStatus` component which accepts `status`. The status can be `'pending'` or `'paid'`.
+- If it's `'paid'`, you want the color to be green. If it's `'pending'`, you want the color to be gray.
 
 You can use `clsx` to conditionally apply the classes, like this:
 
@@ -167,8 +167,8 @@ The `status.tsx` and `pagination.tsx` components use `clsx` to conditionally app
 
 In addition to the approaches we've discussed, you can also style your Next.js application with:
 
-* Sass which allows you to import `.css` and `.scss` files.
-* CSS-in-JS libraries such as [styled-jsx](https://github.com/vercel/styled-jsx), [styled-components](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components), and [emotion](https://github.com/vercel/next.js/tree/canary/examples/with-emotion).
+- Sass which allows you to import `.css` and `.scss` files.
+- CSS-in-JS libraries such as [styled-jsx](https://github.com/vercel/styled-jsx), [styled-components](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components), and [emotion](https://github.com/vercel/next.js/tree/canary/examples/with-emotion).
 
 Take a look at the [CSS documentation](https://nextjs.org/docs/app/building-your-application/styling) for more information.
 
